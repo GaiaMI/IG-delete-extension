@@ -18,18 +18,20 @@ No click simulation: no hovering over messages, no opening the "…" menu, no co
 
 ## Installation
 
-The extension is not published on any store — it loads in developer mode. It works on Chrome, Brave, Edge, Vivaldi and Opera: any recent Chromium browser (Chrome 111+, required for `world: "MAIN"` support).
+The extension is not published on any store — it ships as a ZIP and loads in developer mode. It works on Chrome, Brave, Edge, Vivaldi and Opera: any recent Chromium browser (Chrome 111+, required for `world: "MAIN"` support).
 
-1. Download or clone this repository.
-2. Open the extensions page:
+1. Download the ZIP from this repository.
+2. **Extract it.** A browser cannot load an extension from inside a ZIP archive.
+3. Put the extracted folder somewhere permanent — your Documents, for instance. The browser loads the extension from that folder every time it starts, so moving or deleting it later breaks the extension.
+4. Open the extensions page:
    - Chrome → `chrome://extensions`
    - Brave → `brave://extensions`
    - Edge → `edge://extensions`
-3. Enable **Developer mode** (toggle in the top right).
-4. Click **Load unpacked** and select the repository folder.
-5. Pin the icon to the toolbar for easy access.
+5. Enable **Developer mode** (toggle in the top right).
+6. Click **Load unpacked** and select the folder that **directly contains `manifest.json`**. Archives often extract into a nested folder of the same name — if you picked the wrong level, the browser rejects it with a "manifest file is missing" error.
+7. Pin the icon to the toolbar for easy access.
 
-After editing any file, come back to this page and click ↻ to reload the extension.
+After editing any file, come back to the extensions page and click ↻ to reload the extension.
 
 ---
 
